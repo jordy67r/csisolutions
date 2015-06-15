@@ -1,0 +1,15 @@
+.content.clearfix
+  .service.column
+    %p#notice= notice
+    .service_cont
+      .column.split_8
+        .service_banner.split_10.column
+          =render 'layouts/service_header'
+        .service_title
+          %h1
+            = @service.title.html_safe
+          = render 'layouts/body'
+        = render 'layouts/mainservice'
+      .split_2.column
+        = render 'layouts/sidebar'
+      

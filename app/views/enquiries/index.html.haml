@@ -1,0 +1,27 @@
+.content.clearfix
+  .enquiries.split_8.column  
+    %h1 Contact Us
+    %p If you have any questions then plese do not hesitate in contacting us
+    .find-us
+      #map-canvas
+    %ul 
+      %li 
+        %h2 Address
+      %li CSI Solution Ltd.
+      %li 33a Whiffler Road
+      %li Norwich
+      %li Norfolk
+      %li NR3 2AW
+      %li 
+        %h2 Tel
+      %li 0843 2891559
+      %li 
+        %h2 Email
+      %li= link_to "sales@csi-solution.co.uk", ''
+      %li 
+        %p
+      %li Alternatively use this form below to get in touch and we will get back to you shortly
+
+    = render 'enquiries/form'
+  .split_2.column
+    = render 'layouts/sidebar'

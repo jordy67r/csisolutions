@@ -1,0 +1,27 @@
+= form_for(@service) do |f|
+  - if @service.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@service.errors.count, "error")
+        prohibited this service from being saved:
+      %ul
+        - @service.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = f.label :title
+    %br/
+    = f.text_field :title
+  .field
+    = f.label :body
+    %br/
+    = f.text_area :body
+  .field
+    = f.select :service_type, ["IP CCTV", "Rapid Deployment", "Access Control", "Solutions", "Services", "Support"]
+  .field
+    = f.label :sub_service, 'Tick to create as a main Service:'
+    = f.check_box :sub_service
+  .field
+    = f.label :side_image, 'image for main services side menu'
+    = f.file_field :side_image
+  .actions
+    = f.submit

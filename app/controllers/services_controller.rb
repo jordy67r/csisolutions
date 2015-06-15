@@ -1,0 +1,72 @@
+class ServicesController < ApplicationController
+  before_action :sidebar
+  before_action :set_service, only: [:show, :edit, :update, :destroy]
+
+  # GET /services
+  def index
+    @services = Service.all
+  end
+
+  # GET /services/1
+  def show
+    @service = Service.find(params[:id])
+    @services = Service.all
+  end
+
+  # GET /services/new
+  def new
+    @service = Service.new
+  end
+
+  # GET /services/1/edit
+  def edit
+  end
+
+  # POST /services
+  def create
+    @service = Service.new(service_params)
+
+    if @service.save
+      redirect_to @service, notice: 'Service was successfully created.'
+    else
+      render :new
+    end
+  end
+
+  # PATCH/PUT /services/1
+  def update
+    if @service.update(service_params)
+      redirect_to @service, notice: 'Service was successfully updated.'
+    else
+      render :edit
+    end
+  end
+
+  # DELETE /services/1
+  def destroy
+    @service.destroy
+    redirect_to services_url, notice: 'Service was successfully destroyed.'
+  end
+
+  private
+
+    def sidebar
+      @ip_cctv_services = Service.where(service_type:"IP CCTV")
+      @rapid_repair_services = Service.where(service_type:"Rapid Deployment")
+      @access_control_services = Service.where(service_type: "Access Control") 
+      @solutions_services = Service.where(service_type: "Solutions") 
+      @services_services = Service.where(service_type: "Services")  
+    end
+
+    # Use callbacks to share common setup or constraints between actions.
+    def set_service
+      @service = Service.find(params[:id])
+    end
+
+    # Only allow a trusted parameter "white list" through.
+    def service_params
+      params.require(:service).permit(:title, :body, :service_type, :sub_service,)
+    end
+end
+
+

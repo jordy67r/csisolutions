@@ -1,0 +1,51 @@
+.content 
+  .head_container
+    .header_logo
+    .float_links
+      = link_to "Home", root_path
+      = link_to "Contact us", enquiries_path
+    .nav
+      %ul.head_menu
+        - Service.where(sub_service: false).where(service_type: "IP CCTV").each do |service|
+          %li
+            %h3= link_to service.title, service 
+            %ul
+              - Service.where(sub_service: true).where(service_type: "IP CCTV").each do |service|
+                %li
+                  %p= link_to service.title, service
+      %ul.head_menu
+        - Service.where(sub_service: false).where(service_type: "Rapid Deployment").each do |service|
+          %li
+            %h3= link_to service.title, service 
+            %ul
+              - Service.where(sub_service: true).where(service_type: "Rapid Deployment").each do |service|
+                %li
+                  %p= link_to service.title, service
+      %ul.head_menu
+        - Service.where(sub_service: false).where(service_type: "Access Control").each do |service|
+          %li
+            %h3= link_to service.title, service 
+            %ul
+              - Service.where(sub_service: true).where(service_type: "Access Control").each do |service|
+                %li
+                  %p= link_to service.title, service
+      %ul.head_menu
+        - Service.where(sub_service: false).where(service_type: "Solutions").each do |service|
+          %li
+            %h3= link_to service.title, service 
+            %ul
+              - Service.where(sub_service: true).where(service_type: "Solutions").each do |service|
+                %li
+                  %p= link_to service.title, service
+      %ul.head_menu
+        - Service.where(sub_service: false).where(service_type: "Services").each do |service|
+          %li
+            %h3= link_to service.title, service 
+            %ul
+              - Service.where(sub_service: true).where(service_type: "Services").each do |service|
+                %li  
+                  %p= link_to service.title, service
+      %ul.head_menu
+        - Service.where(sub_service: false).where(service_type: "Support").each do |service|
+          %li
+            %h3= link_to service.title, service 

@@ -1,0 +1,18 @@
+- if  @service.title == "IP CCTV"
+  - Service.where(sub_service: false).where(service_type: "IP CCTV").each do |service|
+    = image_tag("ipcctv.jpg")
+- elsif @service.title == "Rapid Deployment"
+  - Service.where(sub_service: false).where(service_type: "Rapid Deployment").each do |service|
+    = image_tag("webbanners_0015_rapidde.jpg")
+- elsif @service.title == "Access Control"
+  - Service.where(sub_service: false).where(service_type: "Access Control").each do |service|
+    = image_tag("webbanners_0011_Access.jpg")
+- elsif @service.title == "Solutions"
+  - Service.where(sub_service: false).where(service_type: "Solutions").each do |service|
+    = image_tag("webbanners_0006_Solutions.jpg")
+- elsif @service.title == "Services"
+  - Service.where(sub_service: false).where(service_type: "Services").each do |service|
+    = image_tag("webbanners_0003_serv.jpg")
+- elsif @service.title == "Support"
+  - Service.where(sub_service: false).where(service_type: "Support").each do |service|
+    = image_tag("webbanners_0003_serv.jpg")

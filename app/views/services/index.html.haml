@@ -1,0 +1,36 @@
+.content.clearfix
+  .services
+    %h1 Services
+    =image_tag("webbanner.jpg")
+    .column.split_4
+      %h2 An Approach you can trust
+      %p We pride ourselves on the level of service and the quality advice we provide for our clientele. Our team of consultants have gained extensive experience specialising in all aspects of CCTV survey, design, installations and commissioning. Consistently working to the highest standards and specifications with the latest and established technology.
+
+      %p CSI Solution prides itself on its reputation by maintaining all the appropriate security industry and associated engineering standards on all its previous and on-going work within the Railway Industry, Housing Associations, Management Companies, Local Authorities and the Private Sector. Being an expert on CCTV, and an independent CCTV engineering consultant we can ensure a fair and reasonable service and maintenance contract is in put place to ensure your fully commissioned system is maintained appropriately and effectively. This can be a small fraction of the standard proposals made by some CCTV system installers.
+
+    .column.split_8
+      %h2 Some considerations when implementing a CCTV system
+
+      %p Choosing the right CCTV Camera system - Due to the increasing number of CCTV related products on the market it can be quite intimidating to know which product or system to choose. Whether you want to design and install a single access point or complex CCTV digital recording system with multiple users across many sites, our CCTV Consultants can help you decipher your requirements to enable you to achieve a system that is tailored to meet your individual business needs. So with all complexities of designing and implementing a CCTV security or safety camera system we are here to help point you in the right direction and ultimately help you choose the best, most econmic and effective system.
+
+      %p CCTV systems are normally outside the knowledge base of most organisations and this means there is a lot of uncertainty as to whether or not it is the right solution. Even once it is decided that a CCTV system could aid or provide a solution quite often a badly designed/installed systems will fail to live up to the original intentions of the purchaser. What we have found is that a well-planned and implemented CCTV systems normally expands fairly fast over a period of years as the added value becomes clear and the CCTV system becomes integrated into the everyday operation of the business.
+
+      %ul
+        %li Long/Short term CCTV solution Hire.
+        %li CCTV Bespoke system design and manufacture.
+        %li Alternative power supply systems for remote locations including Fuel-cell, Petrol generators, Solar panel and 12Vdc Battery Back-up.
+        %li System integration providing a platform for seamless total security management.
+        %li Demographic statistics, which can be made part of your POS system.
+        %li Data-storage compliance advice with regard to the The Data Protection Act 1998 / 2003, Freedom of Information Act 2000, Crime and Disorder Act 1998.
+        %li Control room planning, design &amp; implementation
+
+    .column.split_4.service_list
+      %ul
+        - @services.each do |service|
+          %li 
+            =image_tag("fpcsi.png")
+            %h2= service.title.titleize
+            .body_text
+              = truncate(service.body.html_safe, :length => 400, :escape => false)
+    .column.split_2
+      = render 'layouts/sidebar'

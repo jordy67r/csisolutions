@@ -1,0 +1,6 @@
+- if @service.sub_service == false
+  .service_body.split_7.column
+    = @service.body.html_safe
+- else
+  .service_body.split_10.column
+    = @service.body.html_safe

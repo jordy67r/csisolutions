@@ -1,0 +1,35 @@
+.sidebar
+  %ul
+    - Service.where(sub_service: false).where(service_type: "IP CCTV").each do |service|
+      %li
+        %h3= link_to service.title, service 
+        - Service.where(sub_service: true).where(service_type: "IP CCTV").each do |service|
+          %p= link_to service.title, service
+  %ul
+    - Service.where(sub_service: false).where(service_type: "Rapid Deployment").each do |service|
+      %li
+        %h3= link_to service.title, service 
+        - Service.where(sub_service: true).where(service_type: "Rapid Deployment").each do |service|
+          %p= link_to service.title, service
+  %ul
+    - Service.where(sub_service: false).where(service_type: "Access Control").each do |service|
+      %li
+        %h3= link_to service.title, service 
+        - Service.where(sub_service: true).where(service_type: "Access Control").each do |service|
+          %p= link_to service.title, service
+  %ul
+    - Service.where(sub_service: false).where(service_type: "Solutions").each do |service|
+      %li
+        %h3= link_to service.title, service 
+        - Service.where(sub_service: true).where(service_type: "Solutions").each do |service|
+          %p= link_to service.title, service
+  %ul
+    - Service.where(sub_service: false).where(service_type: "Services").each do |service|
+      %li
+        %h3= link_to service.title, service 
+        - Service.where(sub_service: true).where(service_type: "Services").each do |service|
+          %p= link_to service.title, service
+  %ul
+    - Service.where(sub_service: false).where(service_type: "Support").each do |service|
+      %li
+        %h3= link_to service.title, service 

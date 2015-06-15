@@ -1,0 +1,132 @@
+.head_container {
+	position: relative;
+	height: 125px;
+	margin: 20px 0;
+}
+.header_logo {
+	background-image: url("logoonly_0.jpg");
+	background-repeat: no-repeat;
+	height: 200px;
+	width: 400px;
+	position: absolute;
+	top: 0;
+	left: 0; 
+}
+.float_links {
+	right: 200px;
+	top: 0;
+	position: absolute;
+	a {
+		text-decoration: none;
+		color: $text-black;
+		margin: 0 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.nav {
+	position: absolute;
+	z-index: 2;
+	top: 60px;
+	left: 135px;
+}/*
+	ul {
+		padding: 0;
+		margin: 0;
+		float: left;
+		list-style: none;
+		li {
+			padding: 10px 0;
+			h3, p {
+				a {
+					text-decoration: none;
+					color: #fff;
+					padding: 10px 40px;
+					background-color: $blue;
+					&:hover {
+						background-color: #fff;
+						color: $text-black;
+						text-decoration: underline;
+					}
+				}
+			}
+			h3 {
+				font-size: 14px;
+				font-weight: 300;
+			}
+			p {
+				display: none;
+			}
+		}
+	}
+}*/
+/*MAIN_-_-_-_MENU*/
+.head_menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+.head_menu li {
+	float: left;
+	h3 {
+		a {
+			font-weight: 400;
+			font-size: 14px;
+			color: #fff;
+			&:hover {
+				color: $text-black;
+				background-color: #fff;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.head_menu li a:link, .head_menu li a:visited {
+	display: block;
+	text-decoration: none;
+	background-color: $blue;
+	padding: 10px 35px;
+	margin: 0;
+	color: #fff;
+}
+/*SUB_-_-_-_MENU*/
+.head_menu li ul {
+	position: relative;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+}
+.head_menu li ul li {
+	display: inline;
+	float: none;
+}
+.head_menu li ul li a:link, .head_menu li ul li a:visited {
+	background-color: $blue;
+	width: auto;
+}
+.head_menu li ul li a:hover {
+	background-color: $blue;	
+}.head_menu li ul {
+	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 0;
+	top: 55px;
+}
+.head_menu li ul li {
+	display: inline;
+	float: none;
+	p {
+		margin: 0;
+	}
+}
+.head_menu li ul li a:link, .head_menu li ul li a:visited {
+	background-color: $blue;
+	width: auto;
+}
+.head_menu li ul li a:hover {
+	background-color: #fff;
+	color: $text-black;	
+}

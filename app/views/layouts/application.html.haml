@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Csisolution
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"}
+    %script{:src => "http://maps.googleapis.com/maps/api/js?sensor=false"}
+    %script{:src => "//use.typekit.net/fgj6smy.js"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .general_wrap 
+      = render "layouts/header"
+      = yield
+      = render "layouts/footer"

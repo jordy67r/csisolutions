@@ -1,0 +1,50 @@
+.enquiries {
+	ul {
+		padding: 0;
+		margin: 0 0 30px;
+		list-style: none;
+		li {
+			a {
+				text-decoration: none;
+				color: $text-black;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}
+.enquiries_form {
+	margin: 0 0 30px;
+}
+.findus {
+	padding: 0;
+	box-sizing: border-box;
+	margin: 0 0 40px;
+	border-radius: 52px;
+	z-index: 1;
+}
+#map-canvas {
+	border-radius: 2px;
+	height: 300px;
+	margin: 40px 0;
+	text-align: center;
+	margin: 0 auto;
+	padding: 1px 0 0 0;
+	@extend shadow;
+	z-index: 1;
+}
+a[href^="http://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+#map-report a img { 
+	display:none; 
+} 
+.gm-style-cc { 
+	display:none; 
+}
