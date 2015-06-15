@@ -76,4 +76,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  # config/environments/production.rb
+  YOURAPPLICATION::Application.configure do
+      
+     # your config settings
+   
+     config.assets.compile = true
+   
+     # your other config settings
+  end
 end
